@@ -4,5 +4,5 @@ matrix:
     - python: "3.4"
 notifications:
   email: false
-install: pip install --user -r requirements.txt
+install: pip install -r requirements.txt
 script: "py.test CalCalc.py"
