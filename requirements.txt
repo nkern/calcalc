@@ -1,9 +1,5 @@
-numpy
-os
-sys
 argparse
 urllib
 ast
 xml
-subprocess
 unittest
