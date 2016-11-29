@@ -10,6 +10,7 @@ VERSION = "0.0.1"
 setup(
     name="calcalc",
     version=VERSION,
-    author="Nick Kern"
+    author="Nick Kern",
+    py_modules=['CalCalc']
 )
 

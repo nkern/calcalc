@@ -7,11 +7,6 @@ import ast
 import xml.etree.ElementTree as ET
 import unittest
 
-parser = argparse.ArgumentParser(description='CalcCalc.calculate')
-parser.add_argument('query', help='This argument is the string that is to be evaluated by calculate')
-parser.add_argument('-f', action='store_true', default=False, dest='return_float', help='return float if set, default is return string')
-results = parser.parse_args()
-
 def calculate(query,return_float=False,output=False):
     try:
         answer = eval(query,{})
@@ -64,4 +59,9 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(calculate("mass of earth",output=True),str)
         
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='CalcCalc.calculate')
+    parser.add_argument('query', help='This argument is the string that is to be evaluated by calculate')
+    parser.add_argument('-f', action='store_true', default=False, dest='return_float', help='return float if set, default is return string')
+    results = parser.parse_args()
+
     calculate(results.query,return_float=results.return_float)
