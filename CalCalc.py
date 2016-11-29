@@ -7,6 +7,8 @@ import ast
 import xml.etree.ElementTree as ET
 import unittest
 
+__all__ = ['calculate']
+
 def calculate(query,return_float=False,output=False):
     try:
         answer = eval(query,{})
